@@ -57,19 +57,19 @@ public class ApplicationController {
         List<String> list=new ArrayList<>();
         List<MultipartFile> files=dto.getFiles();
         //MultipartFile file=fileDTO.getFiles();
-        String companyName=dto.getCompanyName();
-        String brandName=dto.getBrandName();
-        String companyNumber=dto.getCompanyNumber();
-        String detailPage=dto.getDetailPage();
+//        String companyName=dto.getCompanyName();
+//        String brandName=dto.getBrandName();
+//        String companyNumber=dto.getCompanyNumber();
+//        String detailPage=dto.getDetailPage();
         applicationEntity entity=applicationDTO.toEntity(dto);
         service.upload(entity);
         service.sendCustomer(entity);
         service.sendManager(entity,files);
-
-        log.info("companyName:{}",companyName);
-        log.info("brandName:{}",brandName);
-        log.info("companyNumber:{}",companyNumber);
-        log.info("detailPage:{}",detailPage);
+//
+//        log.info("companyName:{}",companyName);
+//        log.info("brandName:{}",brandName);
+//        log.info("companyNumber:{}",companyNumber);
+//        log.info("detailPage:{}",detailPage);
 
         return list;
     }

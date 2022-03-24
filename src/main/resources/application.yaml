@@ -1,0 +1,18 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: dlrsh741@gmail.com
+    password: zvfahipgoybkvutt
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: false
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+      location: /Users/ikno/testspring

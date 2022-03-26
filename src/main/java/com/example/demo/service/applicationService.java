@@ -15,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
@@ -101,10 +102,15 @@ public class applicationService {
 
         for (MultipartFile file:files){
             String originalfileName=file.getOriginalFilename();
-            File dest = new File("/Users/ikno/testspring/"+originalfileName);
+            File dest = new File("/Users/ikno/testspring/"+file.getOriginalFilename());
             file.transferTo(dest);
+//            File convFile=new File(file.getOriginalFilename());
+//            convFile.createNewFile();
+//            FileOutputStream fos=new FileOutputStream(convFile);
+//            fos.write(file.getBytes());
+//            fos.close();
             FileSystemResource fileSystemResource = new FileSystemResource(dest);
-            mimeMessageHelper.addAttachment(originalfileName, fileSystemResource);
+            mimeMessageHelper.addAttachment(file.getOriginalFilename(), fileSystemResource);
         }
 
         //FileSystemResource file = new FileSystemResource(new File("C:/Users/HOME/Desktop/flower.jpg"));

@@ -38,11 +38,52 @@ public class applicationService {
 
 
         String from = "dlrsh741@gmail.com";//관리자 이미엘
-        String subject = "SALELARY 환영합니다";
+        String subject = "환영합니다";
 
         StringBuilder body = new StringBuilder();
         body.append("<img src=\"/Users/ikno/salelaryemail/src/main/java/com/example/demo/image/salelary.png\">");
-        body.append("<html> <body><h1>Hello </h1>");
+        body.append("<html lang=\"en\"></html>\n" +
+                "<body>\n" +
+                "    <table align=\"center\" width=\"100%\" height=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding: 40px; background-image: linear-gradient(to bottom, #f3f4f9 0%, rgba(255, 255, 255, 0) 100%); font-family:-apple-system, BlinkMacSystemFont, “Malgun Gothic”, “맑은 고딕“, Roboto, Helvetica, Arial, sans-serif;\">\n" +
+                "        <tbody>\n" +
+                "            <tr>\n" +
+                "                <td>\n" +
+                "                    <table align=\"center\" width=\"720\" height=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"20\" style=\"padding: 40px; background:#fff;font-family:-apple-system, BlinkMacSystemFont, “Malgun Gothic”, “맑은 고딕“, Roboto, Helvetica, Arial, sans-serif;\">\n" +
+                "                        <tbody>\n" +
+                "                            <tr style=\"margin-bottom:20px\">\n" +
+                "                                <td style=\"font-size:16px; line-height:1.5; margin-bottom: 20px;\">\n" +
+                "                                    ~~~~~~~~~~~~~~~~~~~ <br>\n" +
+                "                                    ~~~~~~~~~~~~~~\n" +
+                "                                </td>\n" +
+                "                            </tr>\n" +
+                "                            <tr>\n" +
+                "                                <td style=\"width:500px; border:3px solid #f3f4f9; text-align:center; border:1px solid #606cdb; border-radius:15px; padding:80px; background:#f3f4f9;\">\n" +
+                "                                    <h2 style=\"font-size:24px; color:#2885cc; margin-right:10px; font-weight: bold; padding: 0; margin: 0;\">인증번호 : <strong style=\"font-size:30px; color:#191919;\">************</strong></h2>\n" +
+                "                                </td>\n" +
+                "                            </tr>\n" +
+                "                            <tr>\n" +
+                "                                <td style=\"font-size:14px; margin-top: 10px; color:#ee6723;\">* 홈페이지에서 전송받은 인증번호를 입력해주세요.</td>\n" +
+                "                            </tr>\n" +
+                "                            <tr>\n" +
+                "                                <td>\n" +
+                "                                    <table align=\"center\" width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"  style=\"width:100%; margin-top:60px; \">\n" +
+                "                                        <tbody>\n" +
+                "                                            <tr>\n" +
+                "                                                <td style=\"width:100%; padding:40px 20px; border:1px solid #ddd; font-size:15px; text-align: center; background:#f9f9f9; color:#666;\"> 으로 연락 부탁드립니다.</td>\n" +
+                "                                            </tr>\n" +
+                "                                        </tbody>\n" +
+                "                                    </table>\n" +
+                "                                </td>\n" +
+                "                            </tr>\n" +
+                "                        </tbody>\n" +
+                "                    </table>\n" +
+                "                </td>\n" +
+                "            </tr>\n" +
+                "        </tbody>\n" +
+                "    </table>\n" +
+                        "<img src=\"/Users/ikno/salelaryemail/src/main/java/com/example/demo/image/salelary.png\">"+
+                "</body>\n" +
+                "</html>");
         body.append("dddd"+subject+"");
         //body.append("<div>테스트 입니다2. <img src=\"cid:flower.jpg\"> </div> </body></html>");
 
